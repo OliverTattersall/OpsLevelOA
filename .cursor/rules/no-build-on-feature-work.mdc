@@ -1,0 +1,16 @@
+---
+description: Do not run production builds when implementing features
+alwaysApply: true
+---
+
+# No Build on Feature Work
+
+When creating or implementing a new feature, do **not** run production build commands such as:
+
+- `npm run build`
+- `vite build`
+- `yarn build` / `pnpm build`
+
+The user will test changes themselves (e.g. via `npm run dev` or manual verification).
+
+Only run a build if the user explicitly asks for it, or when fixing build/CI failures that require it.
